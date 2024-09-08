@@ -1,4 +1,22 @@
+'''
+The code is correct but just need to add some checks to make sure the input is correct.
+'''
+
+
 def bubble_sort(arr):
+    '''
+    Check if arr is an array first
+    '''
+    if not isinstance(arr, list):
+        raise TypeError("Input must be a list")
+
+    '''
+    Check if all elements in arr are numbers
+    '''
+    for i in arr:
+        if not isinstance(i, (int, float)):
+            raise TypeError("All elements in the list must be numbers")
+
     n = len(arr)
     # Traverse through all array elements
     for i in range(n):
@@ -8,6 +26,7 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
+
 
 # Example usage
 arr = [64, 34, 25, 12, 22, 11, 90]
