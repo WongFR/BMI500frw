@@ -11,7 +11,7 @@ def bubble_sort(arr):
         raise TypeError("Input must be a list")
 
     '''
-    Check if all elements in arr are numbers
+    Check if your elements in arr are numbers
     '''
     for i in arr:
         if not isinstance(i, (int, float)):
